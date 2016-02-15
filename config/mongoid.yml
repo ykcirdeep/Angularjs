@@ -86,11 +86,23 @@ development:
 
     # Ensure all times are UTC in the app side. (default: false)
     # use_utc: false
+
 production:
-  sessions:
+  clients:
     default:
-      uri:  mongodb://heroku_66cjx2q7:2m51ck073uum4hhss6ucofeiuv@ds039674.mongolab.com:39674/heroku_66cjx2q7
-      options:
+     # The standard MongoDB connection URI allows for easy
+     # replica set connection setup.
+     # Use environment variables or a config file to keep your
+     # credentials safe e.g. <%= ENV['MONGOLAB_URI'] %>.
+     uri: mongodb://heroku_66cjx2q7:2m51ck073uum4hhss6ucofeiuv@ds039674.mongolab.com:39674/heroku_66cjx2q7
+
+     options:
+       # The default timeout is 5, which is the time in seconds
+       # for a connection to time out.
+       # We recommend 15 because it allows for plenty of time
+       # in most operating environments.
+       connect_timeout: 15
+       
 test:
   sessions:
     default:
