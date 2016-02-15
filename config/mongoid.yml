@@ -58,6 +58,7 @@ development:
         # (default: true)
         # auto_discover: true
 
+    uri: mongodb://heroku_66cjx2q7:2m51ck073uum4hhss6ucofeiuv@ds039674.mongolab.com:39674/heroku_66cjx2q7
 
   # Configure Mongoid specific options. (optional)
   options:
