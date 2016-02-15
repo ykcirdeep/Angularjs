@@ -58,9 +58,7 @@ development:
         # (default: true)
         # auto_discover: true
 
-    uri: mongodb://heroku_66cjx2q7:2m51ck073uum4hhss6ucofeiuv@ds039674.mongolab.com:39674/heroku_66cjx2q7
-
-  # Configure Mongoid specific options. (optional)
+    # Configure Mongoid specific options. (optional)
   options:
     # Includes the root model name in json serialization. (default: false)
     # include_root_in_json: false
@@ -89,7 +87,11 @@ development:
     # Ensure all times are UTC in the app side. (default: false)
     # use_utc: false
 production:
-  uri: <%= ENV['MONGOHQ_URL'] %>
+  sessions:
+    default:
+      database: angularjs_learning1_test
+      uri: <%= ENV['MONGOHQ_URL'] %>
+      options:
 test:
   sessions:
     default:
