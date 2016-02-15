@@ -16,8 +16,8 @@
 //= require angular-resource
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require modules/app.js
 //= require_tree .
-//= require ./modules/*.js
-//= require ./controllers/*.js
-//= require ./directives/*.js
-//= require ./services/*.js
+//= require controllers/firstcontroller.js
+//= require directives/filters.js
+//= require services/factories.js

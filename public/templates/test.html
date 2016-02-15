@@ -1,10 +1,10 @@
-<h1>Angulars Learning</h1>
+<h3>Angular Testing</h3>
 <div class="row-fluid">
     <div class="container">
             <form class="form-inline" ng-submit="addEntry()">
                 <div class="form-group">
-                  <input type="text" class=" form-control" ng-model="search.$"  placeholder="Search">
-                <input type="text" class=" form-control" ng-model="name" ng-enter="addEntry()" placeholder="insert name">
+                  <input type="text" class="form-control" ng-model="search.$"  placeholder="Search">
+                <input type="text" class="form-control" ng-model="name" ng-enter="addEntry()" placeholder="insert name">
                 <input type="submit" value="Add" class="btn btn-primary"  ng-disabled="!name">
                <input type="button" value="Test" class="btn btn-success" ng-click="test()" >
 
@@ -34,7 +34,8 @@
    
     <div class="row-fluid">
         <div class="container">
-        <button class="btn btn-primary" ng-click="pickWinner()" ng-hide="entries.length<2">{{entries.first}}winner</button>
+        <button class="btn btn-primary" ng-click="pickWinner()" ng-hide="entries.length<2">winner</button>
+         <button class="btn btn-primary" ng-click="resetWinner()" ng-hide="entries.length<2">Reset</button>
         </div>
     </div>
     <div class="container" ng-hide="true">

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: 'angulars#landing'
     
   get 'learningmongos/test', to: 'angulars#test'
+  get 'learningmongos/resetWinner', to: 'angulars#resetWinner'
   resources :learningmongos, controller: :angulars, defaults: {format: 'json'}
   
   # The priority is based upon order of creation: first created -> highest priority.

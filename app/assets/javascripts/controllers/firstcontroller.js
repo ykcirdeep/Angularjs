@@ -2,10 +2,10 @@ app.controller('firstController', ['$scope', '$injector', '$routeParams',  funct
  
   var Factory = $injector.get('Learningmongo');
   Factory.query({}, function(response){
-    $scope.entries = response;
-    alert(jQuery.isEmptyObject(response));
-    if (response)
+   if (response!="")
+    {$scope.entries = response;
     $scope.columns = $( Object.keys(response[0]) ).not( ['_id', 'created_at', 'updated_at'] ).get();
+    }
   });
 
 
@@ -25,6 +25,11 @@ app.controller('firstController', ['$scope', '$injector', '$routeParams',  funct
     Factory.test(function(response){
       alert(response);
     });
+  }
+  $scope.resetWinner=function(){
+     Factory.resetWinner({winner: false} ,function(response){
+        $scope.entries=response;
+      });
   }
   $scope.pickWinner = function(){
     

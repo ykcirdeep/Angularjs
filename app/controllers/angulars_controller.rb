@@ -36,7 +36,14 @@ class AngularsController < ApplicationController
     end
     def test
         render json: ["true"]
-      end
+    end
+    def resetWinner
+      params.permit!
+      Learningmongo.update_all(winner: false)
+      data= Learningmongo.all
+      render json: data
+     
+    end
     def parms_permit
       params.require(:entry).permit
     end
