@@ -89,8 +89,7 @@ development:
 production:
   sessions:
     default:
-      database: angularjs_learning1_test
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      uri:  mongodb://heroku_66cjx2q7:2m51ck073uum4hhss6ucofeiuv@ds039674.mongolab.com:39674/heroku_66cjx2q7
       options:
 test:
   sessions:
