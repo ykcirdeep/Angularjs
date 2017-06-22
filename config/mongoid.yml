@@ -145,4 +145,4 @@ test:
 production:
   sessions:
     default:
-      uri: <%= ENV['MONGOLAB_URI'] %>
+      uri: mongodb://ricky_user:Deepak007@ds129352.mlab.com:29352/tweet2test
